@@ -14,13 +14,13 @@ module.exports = class ClienteService {
         console.log(`process.env.DB_PASSWORD: ${process.env.DB_PASSWORD}`);
         console.log(`process.env.CONNECT_STRING: ${process.env.CONNECT_STRING}`);
 
-        console.log('Criando pool de conexões...')
+        console.log('Creando pool de conexiones...')
         await oracledb.createPool({
             user: process.env.DB_USER,
             password: process.env.DB_PASSWORD,
             connectString: process.env.CONNECT_STRING,
         });
-        console.log('Pool de conexões criado.')
+        console.log('Pool de conexiones creado.')
         return new ClienteService();
     }
 
@@ -179,10 +179,10 @@ module.exports = class ClienteService {
     }
 
     async closePool() {
-        console.log('Closing connection pool...');
+        console.log('Cerrando conexion...');
         try {
             await oracledb.getPool().close(10);
-            console.log('Pool closed');
+            console.log('Pool cerrado');
         } catch (err) {
             console.error(err);
         }
