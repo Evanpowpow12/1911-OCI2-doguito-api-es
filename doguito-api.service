@@ -12,7 +12,7 @@ Environment="DB_PASSWORD=???"
 Environment="CONNECT_STRING=???"
 Type=simple
 User=opc
-ExecStart=/usr/bin/node /home/opc/doguito-api/bin/www
+ExecStart=/usr/bin/node /home/opc/doguito-api-es/bin/www
 Restart=on-failure
 
 [Install]
